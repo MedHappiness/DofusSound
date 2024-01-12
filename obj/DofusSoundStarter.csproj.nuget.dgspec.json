@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj": {}
+    "d:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj": {}
   },
   "projects": {
-    "D:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj": {
+    "d:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj",
+        "projectUniqueName": "d:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj",
         "projectName": "DofusSoundStarter",
-        "projectPath": "D:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj",
+        "projectPath": "d:\\Desktop 2.0\\DofusSoundStarter\\DofusSoundStarter.csproj",
         "packagesPath": "C:\\Users\\TheKe\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop 2.0\\DofusSoundStarter\\obj\\",
+        "outputPath": "d:\\Desktop 2.0\\DofusSoundStarter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
