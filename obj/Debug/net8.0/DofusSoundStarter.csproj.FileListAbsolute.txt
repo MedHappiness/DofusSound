@@ -1,0 +1,15 @@
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\bin\Debug\net8.0\DofusSoundStarter.exe
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\bin\Debug\net8.0\DofusSoundStarter.deps.json
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\bin\Debug\net8.0\DofusSoundStarter.runtimeconfig.json
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\bin\Debug\net8.0\DofusSoundStarter.dll
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\bin\Debug\net8.0\DofusSoundStarter.pdb
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.GeneratedMSBuildEditorConfig.editorconfig
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.AssemblyInfoInputs.cache
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.AssemblyInfo.cs
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.csproj.CoreCompileInputs.cache
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.sourcelink.json
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.dll
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\refint\DofusSoundStarter.dll
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.pdb
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\DofusSoundStarter.genruntimeconfig.cache
+d:\Desktop 2.0\Argus\Launcher Workshop\Watari.Launcher\DofusSoundStarter\obj\Debug\net8.0\ref\DofusSoundStarter.dll
