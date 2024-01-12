@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DofusSoundStarter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+053680270e34dd19732d771c12a8ab3aa3890ea2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a944b03f98520bbf3f32ee29f08d02bf5a91f4c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("DofusSoundStarter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DofusSoundStarter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,30 +1,61 @@
-﻿
+﻿using System;
 using System.Diagnostics;
 
-string exePath = @"D:\Desktop 2.0\Argus Beta\Dofus.exe";
-string RegExeFolder = @"D:\Desktop 2.0\Argus Beta\reg\Reg.exe";
-
-SoundMain.Init(); // on démarre le moteur de son
-
-Process.Start(RegExeFolder, $"--reg-engine-port={SoundMain.regServer.Port}");
-
-while (true)
+class Program
 {
-    Console.WriteLine("Press D to start a new dofus instance");
-    Console.WriteLine("Press Q to quit");
-
-    var key = Console.ReadLine();
-    if (key == "D")
+    static string dofusPath;
+    static string RegPath;
+    static void Main(string[] args)
     {
-        StartNewDofusInstance();
-    }
-    else if (key == "Q")
-    {
-        break;
-    }
-} // on attend que le programme se fermes pour fermer le serveur
+        string argPath = @"D:\Desktop 2.0\Argus Beta";
+        if (args.Length > 0)
+        {
+            string appPath = args[0];
+            Console.WriteLine($"Startup app path received: {appPath}");
 
-void StartNewDofusInstance()
-{
-    Process.Start(exePath, $"--lang=fr --update-server-port={SoundMain.upServer.Port} --updater_version=v2 --reg-client-port={SoundMain.gameServer.Port}");
+            if (!System.IO.File.Exists(appPath + @"\Dofus.exe"))
+            {
+                Console.WriteLine("Dofus.exe not found in the startup path.");
+                return;
+            }
+
+            if (!System.IO.File.Exists(appPath + @"\reg\Reg.exe"))
+            {
+                Console.WriteLine("Reg.exe not found in the startup path.");
+                return;
+            }
+            
+            dofusPath = appPath + @"\Dofus.exe";
+            RegPath = appPath + @"\reg\Reg.exe";
+
+            SoundMain.Init(); // Start the sound engine
+
+            Process.Start(RegPath, $"--reg-engine-port={SoundMain.regServer.Port}");
+
+            while (true)
+            {
+                Console.WriteLine("Press D to start a new dofus instance");
+                Console.WriteLine("Press Q to quit");
+
+                var key = Console.ReadLine();
+                if (key == "D")
+                {
+                    StartNewDofusInstance();
+                }
+                else if (key == "Q")
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Please provide the startup path as a command-line argument.");
+        }
+    }
+
+    static void StartNewDofusInstance()
+    {
+        Process.Start(dofusPath, $"--lang=fr --update-server-port={SoundMain.upServer.Port} --updater_version=v2 --reg-client-port={SoundMain.gameServer.Port}");
+    }
 }
