@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 class Program
 {
@@ -7,30 +8,34 @@ class Program
     static string RegPath;
     static void Main(string[] args)
     {
-        string argPath = @"D:\Desktop 2.0\Argus Beta";
+        string executableType =
+            RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "exe" :
+            RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ? "app" :
+            "elf";
+
         if (args.Length > 0)
         {
             string appPath = args[0];
             Console.WriteLine($"Startup app path received: {appPath}");
 
-            if (!System.IO.File.Exists(appPath + @"\Dofus.exe"))
+            if (!System.IO.File.Exists(appPath + @"/Dofus." + executableType))
             {
-                Console.WriteLine("Dofus.exe not found in the startup path.");
+                Console.WriteLine($"Dofus.{executableType} not found in the startup path.");
                 return;
             }
 
-            if (!System.IO.File.Exists(appPath + @"\reg\Reg.exe"))
+            if (!System.IO.File.Exists(appPath + @"/reg/Reg." + executableType))
             {
-                Console.WriteLine("Reg.exe not found in the startup path.");
+                Console.WriteLine($"Reg.{executableType} not found in the startup path.");
                 return;
             }
-            
-            dofusPath = appPath + @"\Dofus.exe";
-            RegPath = appPath + @"\reg\Reg.exe";
+
+            dofusPath = appPath + @"/Dofus." + executableType;
+            RegPath = appPath + @"/reg/Reg." + executableType;
 
             SoundMain.Init(); // Start the sound engine
 
-            Process.Start(RegPath, $"--reg-engine-port={SoundMain.regServer.Port}");
+            RunProcess(RegPath, $"--reg-engine-port={SoundMain.regServer.Port}");
 
             while (true)
             {
@@ -56,6 +61,29 @@ class Program
 
     static void StartNewDofusInstance()
     {
-        Process.Start(dofusPath, $"--lang=fr --update-server-port={SoundMain.upServer.Port} --updater_version=v2 --reg-client-port={SoundMain.gameServer.Port}");
+        RunProcess(dofusPath, $"--lang=fr --update-server-port={SoundMain.upServer.Port} --updater_version=v2 --reg-client-port={SoundMain.gameServer.Port}");
     }
+
+    public static void RunProcess(string executablePath, string arguments)
+    {
+        try
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = executablePath,
+                Arguments = $"{arguments}",
+                UseShellExecute = false
+            };
+
+            using (Process process = new Process { StartInfo = startInfo })
+            {
+                process.Start();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
 }

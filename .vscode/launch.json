@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/bin/Debug/net8.0/DofusSoundStarter.dll",
-            "args": ["D:\\Desktop 2.0\\Argus Beta"],
+            "args": ["D:/Desktop 2.0/Argus Beta"],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "console": "internalConsole"
